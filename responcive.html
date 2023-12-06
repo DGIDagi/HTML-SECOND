@@ -18,6 +18,17 @@
                 padding: 15px;
                 text-align: center;
             }
+            [ class*="col-"]{
+                float: left;
+                padding: 15px;
+                border: 1px solid red;
+                
+            }
+            .row::after{
+                content: "";
+                clear: both;
+                display: block;
+            }
             /*.menu{
                 width: 25%;
                 float: left;
@@ -30,17 +41,11 @@
                 border: 1px solid red;
                 padding: 15px;
             }*/
-            [ class*="col-"]{
-                float: left;
-                padding: 15px;
-                border: 1px solid red;
-                
-            }
-            .row::after{
-                content: "";
-                clear: both;
-                display: block;
-            }
+@media only screen and (max-width: 768px){
+    [class*="col-"]{
+        width: 100%;
+    }
+}
             .col-1 {width: 8.33%;}
             .col-2 {width: 16.66%;}
             .col-3 {width: 25%;}
